@@ -7,6 +7,7 @@ public class Converter {
     public String convert(int arabNum) {
         romanNum = "";
         int rest = arabNum;
+        rest = appendRomanNum(rest, 9, "IX");
         rest = appendRomanNum(rest, 5, "V");
         rest = appendRomanNum(rest, 4, "IV");
         for (int i = 0; i < rest; i++) {

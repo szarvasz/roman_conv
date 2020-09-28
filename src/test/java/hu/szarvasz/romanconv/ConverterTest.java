@@ -49,4 +49,9 @@ public class ConverterTest {
     public void test_VIII(){
         assertEquals("VIII", converter.convert(8));
     }
+
+    @Test
+    public void test_IX(){
+        assertEquals("IX", converter.convert(9));
+    }
 }
