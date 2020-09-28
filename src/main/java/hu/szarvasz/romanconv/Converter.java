@@ -4,7 +4,9 @@ public class Converter {
 
     public static String convert(int arabNum) {
         String romanNum = "";
-        if (arabNum == 4){
+        if (arabNum == 5){
+            romanNum = "V";
+        }else if (arabNum == 4){
             romanNum = "IV";
         } else {
             for (int i = 0; i < arabNum; i++) {

@@ -26,4 +26,9 @@ public class ConverterTest {
     public void test_IV(){
         assertEquals("IV", Converter.convert(4));
     }
+
+    @Test
+    public void test_V(){
+        assertEquals("V", Converter.convert(5));
+    }
 }
