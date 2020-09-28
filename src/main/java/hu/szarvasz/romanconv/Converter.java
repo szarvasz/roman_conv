@@ -4,21 +4,21 @@ public class Converter {
 
     private String romanNum;
 
+    private int[] VALUES = new int[]{9, 5, 4, 1};
+    private String[] DIGITS = new String[]{"IX", "V", "IV", "I"};
+
     public String convert(int arabNum) {
         romanNum = "";
         int rest = arabNum;
-        rest = appendRomanNum(rest, 9, "IX");
-        rest = appendRomanNum(rest, 5, "V");
-        rest = appendRomanNum(rest, 4, "IV");
-        for (int i = 0; i < rest; i++) {
-            romanNum += "I";
+        for (int i = 0; i < VALUES.length; i++){
+            rest = appendRomanNum(rest, VALUES[i], DIGITS[i]);
         }
         return romanNum;
     }
 
     private int appendRomanNum(int arabNum, int value, String romanDigit){
         int rest = arabNum;
-        if (rest >= value){
+        while (rest >= value){
             romanNum += romanDigit;
             rest -= value;
         }
