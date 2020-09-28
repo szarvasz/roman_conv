@@ -5,7 +5,7 @@ public class Converter {
     public static String convert(int arabNum) {
         String romanNum = "";
         int rest = arabNum;
-        if (rest == 5){
+        if (rest >= 5){
             romanNum = "V";
             rest -= 5;
         }

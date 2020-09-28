@@ -31,4 +31,14 @@ public class ConverterTest {
     public void test_V(){
         assertEquals("V", Converter.convert(5));
     }
+
+    @Test
+    public void test_VI(){
+        assertEquals("VI", Converter.convert(6));
+    }
+
+    @Test
+    public void test_VIII(){
+        assertEquals("VIII", Converter.convert(8));
+    }
 }
