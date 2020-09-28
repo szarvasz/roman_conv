@@ -4,8 +4,8 @@ public class Converter {
 
     private String romanNum;
 
-    private int[] VALUES = new int[]{50, 40, 10, 9, 5, 4, 1};
-    private String[] DIGITS = new String[]{"L", "XL", "X", "IX", "V", "IV", "I"};
+    private int[] VALUES = new int[]{100, 90, 50, 40, 10, 9, 5, 4, 1};
+    private String[] DIGITS = new String[]{"C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"};
 
     public String convert(int arabNum) {
         romanNum = "";
