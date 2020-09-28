@@ -2,21 +2,25 @@ package hu.szarvasz.romanconv;
 
 public class Converter {
 
-    public static String convert(int arabNum) {
-        String romanNum = "";
+    private String romanNum;
+
+    public String convert(int arabNum) {
+        romanNum = "";
         int rest = arabNum;
-        if (rest >= 5){
-            romanNum = "V";
-            rest -= 5;
-        }
-        if (rest == 4){
-            romanNum = "IV";
-            rest -= 4;
-        }
+        rest = appendRomanNum(rest, 5, "V");
+        rest = appendRomanNum(rest, 4, "IV");
         for (int i = 0; i < rest; i++) {
             romanNum += "I";
         }
-
         return romanNum;
+    }
+
+    private int appendRomanNum(int arabNum, int value, String romanDigit){
+        int rest = arabNum;
+        if (rest >= value){
+            romanNum += romanDigit;
+            rest -= value;
+        }
+        return rest;
     }
 }
