@@ -59,4 +59,14 @@ public class ConverterTest {
     public void test_X(){
         assertEquals("X", converter.convert(10));
     }
+
+    @Test
+    public void test_XL(){
+        assertEquals("XL", converter.convert(40));
+    }
+
+    @Test
+    public void test_L(){
+        assertEquals("L", converter.convert(50));
+    }
 }
