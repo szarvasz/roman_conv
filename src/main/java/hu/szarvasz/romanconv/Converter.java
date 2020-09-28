@@ -4,15 +4,19 @@ public class Converter {
 
     public static String convert(int arabNum) {
         String romanNum = "";
-        if (arabNum == 5){
+        int rest = arabNum;
+        if (rest == 5){
             romanNum = "V";
-        }else if (arabNum == 4){
-            romanNum = "IV";
-        } else {
-            for (int i = 0; i < arabNum; i++) {
-                romanNum += "I";
-            }
+            rest -= 5;
         }
+        if (rest == 4){
+            romanNum = "IV";
+            rest -= 4;
+        }
+        for (int i = 0; i < rest; i++) {
+            romanNum += "I";
+        }
+
         return romanNum;
     }
 }
